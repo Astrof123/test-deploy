@@ -10,7 +10,7 @@ from sqlalchemy import pool
 from alembic import context
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from server.src.database import BaseDBModel
+from src.database import BaseDBModel
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

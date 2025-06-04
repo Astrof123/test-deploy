@@ -417,7 +417,9 @@
         }
 
         .nodevices {
-            font-size: 24px;
+            font-size: 16px;
+            margin: 0 auto;
+            width: 300px;
         }
 
         .nodevices-block {
