@@ -34,9 +34,7 @@ services:
 
   backend:
     build:
-      context: ./server
-    environment:
-      FLOWER_DATABASE_URL: mysql+asyncmy://flower_user:user@db:3306/flower_monitoring
+      context: ./server      
     networks:
       - dev
     depends_on:
