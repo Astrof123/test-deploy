@@ -36,7 +36,7 @@ services:
     build:
       context: ./server
     environment:
-      FLOWER_DATABASE_URL: mysql://myuser:mypassword@db:3306/mydatabase
+      FLOWER_DATABASE_URL: mysql+asyncmy://myuser:mypassword@db:3306/mydatabase
     networks:
       - dev
     depends_on:

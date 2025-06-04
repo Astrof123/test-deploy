@@ -7,4 +7,3 @@ aiogram
 pymysql
 alembic
 cryptography
-mysqlclient
