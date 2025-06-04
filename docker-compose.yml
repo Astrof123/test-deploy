@@ -28,7 +28,6 @@ services:
     depends_on:
       - backend
       - frontend
-      - db
     networks:
       - dev
     
@@ -36,8 +35,12 @@ services:
   backend:
     build:
       context: ./server
+    environment:
+      DATABASE_URL: mysql://myuser:mypassword@db:3306/mydatabase
     networks:
       - dev
+    depends_on:
+      - db
 
   frontend:
     build:
