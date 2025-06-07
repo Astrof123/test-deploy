@@ -176,7 +176,7 @@
 
     async function getConfig() {
         try {
-            const response = await axios.post('http://localhost:5050/devices/config', {
+            const response = await axios.post('/api/devices/config', {
                 deviceToken: props.deviceToken
             });
             
