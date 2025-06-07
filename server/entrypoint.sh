@@ -1,14 +1,8 @@
 #!/bin/sh
 
-sudo apt install nc
-
-until nc -z -v -w30 db 3306
-do
-  echo "Waiting for database connection..."
-  sleep 2
-done
-
+python wait_for_db.py
 alembic upgrade head
 python bot.py &
 python main.py
+
 
