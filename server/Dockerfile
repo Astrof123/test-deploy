@@ -5,6 +5,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 COPY entrypoint.sh /entrypoint.sh
-RUN apk add --no-cache netcat-openbsd
+RUN apt-get update && apt-get install -y netcat && rm -rf /var/lib/apt/lists/*
 RUN chmod +x /entrypoint.sh
 CMD ["/entrypoint.sh"]
