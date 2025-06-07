@@ -5,11 +5,8 @@ services:
   db:
     image: mysql:8.0
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: user
-      MYSQL_DATABASE: flower_monitoring
-      MYSQL_USER: flower_user
-      MYSQL_PASSWORD: user
+    env_file:
+      - .env.db
     ports:
       - "3306:3306"
     volumes:
