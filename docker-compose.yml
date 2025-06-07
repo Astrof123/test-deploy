@@ -34,7 +34,9 @@ services:
 
   backend:
     build:
-      context: ./server      
+      context: ./server
+    env_file:
+      - .env
     networks:
       - dev
     depends_on:
